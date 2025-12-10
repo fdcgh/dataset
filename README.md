@@ -38,5 +38,5 @@ Each entry contains:
 
 ## Download Links
 
-- [train_inference.json](https://raw.githubusercontent.com/fdcgh/browser-traffic-inference/main/Browser/train_inference.json)
-- [test_inference.json](https://raw.githubusercontent.com/fdcgh/browser-traffic-inference/main/Browser/test_inference.json)
+- [train_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/Browser/train_inference.json)
+- [test_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/Browser/test_inference.json)
