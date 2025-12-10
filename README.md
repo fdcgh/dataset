@@ -1,17 +1,28 @@
-# Browser Traffic Inference Dataset
+# Network Traffic Inference Dataset
 
-This repository contains AI-enhanced browser traffic classification datasets with detailed explanations.
+This repository contains AI-enhanced network traffic classification datasets with detailed explanations across multiple domains.
 
 ## Files
 
 ### Browser/
-- **train_inference.json** (84MB, 355,982 entries) - Training dataset with AI-generated explanations
-- **test_inference.json** (9.3MB, 39,602 entries) - Test dataset with AI-generated explanations
+- **train_inference.json** (84MB, 355,982 entries) - Browser traffic training dataset with AI-generated explanations
+- **test_inference.json** (9.3MB, 39,602 entries) - Browser traffic test dataset with AI-generated explanations
+
+### VNAT/
+- **train_inference.json** (806KB, 2,407 entries) - VPN/Non-VPN traffic training dataset with AI-generated explanations
+- **test_inference.json** (91KB, 272 entries) - VPN/Non-VPN traffic test dataset with AI-generated explanations
+
+### ISCX-VPN/
+- **train_inference.json** (2.7MB, 8,662 entries) - ISCX VPN traffic training dataset with AI-generated explanations
+- **test_inference.json** (318KB, 967 entries) - ISCX VPN traffic test dataset with AI-generated explanations
 
 ## Dataset Features
 
 - **AI-Enhanced Outputs**: Each entry contains detailed technical analysis explaining the traffic classification
-- **Browser Types**: samsung_firefox_1000, samsung_chrome_1000, samsung_internet_1000, samsung_uc_1000, samsung_edge_1000
+- **Multiple Domains**: 
+  - **Browser Traffic**: samsung_firefox_1000, samsung_chrome_1000, samsung_internet_1000, samsung_uc_1000, samsung_edge_1000
+  - **VPN/Non-VPN**: nonvpn_netflix, nonvpn_skype-chat, vpn_youtube, vpn_hangouts_audio, etc.
+  - **Proxy Traffic**: Proxy 6, Proxy 10, etc.
 - **Format**: Standard instruction-input-output format for machine learning
 - **Technical Details**: Includes TLS handshake analysis, packet size patterns, domain analysis, and protocol identification
 
@@ -20,13 +31,17 @@ This repository contains AI-enhanced browser traffic classification datasets wit
 ```python
 import json
 
-# Load training data
+# Load Browser traffic data
 with open('Browser/train_inference.json', 'r') as f:
-    train_data = json.load(f)
+    browser_train = json.load(f)
 
-# Load test data  
-with open('Browser/test_inference.json', 'r') as f:
-    test_data = json.load(f)
+# Load VNAT traffic data
+with open('VNAT/train_inference.json', 'r') as f:
+    vnat_train = json.load(f)
+
+# Load ISCX-VPN traffic data
+with open('ISCX-VPN/train_inference.json', 'r') as f:
+    iscx_train = json.load(f)
 ```
 
 ## Data Format
@@ -38,5 +53,14 @@ Each entry contains:
 
 ## Download Links
 
-- [train_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/Browser/train_inference.json)
-- [test_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/Browser/test_inference.json)
+### Browser Traffic
+- [Browser/train_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/Browser/train_inference.json) (84MB)
+- [Browser/test_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/Browser/test_inference.json) (9.3MB)
+
+### VNAT Traffic
+- [VNAT/train_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/VNAT/train_inference.json) (806KB)
+- [VNAT/test_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/VNAT/test_inference.json) (91KB)
+
+### ISCX-VPN Traffic
+- [ISCX-VPN/train_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/ISCX-VPN/train_inference.json) (2.7MB)
+- [ISCX-VPN/test_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/ISCX-VPN/test_inference.json) (318KB)
