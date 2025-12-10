@@ -13,8 +13,12 @@ This repository contains AI-enhanced network traffic classification datasets wit
 - **test_inference.json** (91KB, 272 entries) - VPN/Non-VPN traffic test dataset with AI-generated explanations
 
 ### ISCX-VPN/
-- **train_inference.json** (2.7MB, 8,662 entries) - ISCX VPN traffic training dataset with AI-generated explanations
+- **train_inference.json** (2.8MB, 8,662 entries) - ISCX VPN traffic training dataset with AI-generated explanations
 - **test_inference.json** (318KB, 967 entries) - ISCX VPN traffic test dataset with AI-generated explanations
+
+### DataCon-Proxy/
+- **train_inference.json** (3.9MB, 19,997 entries) - DataCon Proxy traffic training dataset with AI-generated explanations
+- **test_inference.json** (427KB, 2,227 entries) - DataCon Proxy traffic test dataset with AI-generated explanations
 
 ## Dataset Features
 
@@ -42,6 +46,10 @@ with open('VNAT/train_inference.json', 'r') as f:
 # Load ISCX-VPN traffic data
 with open('ISCX-VPN/train_inference.json', 'r') as f:
     iscx_train = json.load(f)
+
+# Load DataCon-Proxy traffic data
+with open('DataCon-Proxy/train_inference.json', 'r') as f:
+    proxy_train = json.load(f)
 ```
 
 ## Data Format
@@ -62,5 +70,9 @@ Each entry contains:
 - [VNAT/test_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/VNAT/test_inference.json) (91KB)
 
 ### ISCX-VPN Traffic
-- [ISCX-VPN/train_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/ISCX-VPN/train_inference.json) (2.7MB)
+- [ISCX-VPN/train_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/ISCX-VPN/train_inference.json) (2.8MB)
 - [ISCX-VPN/test_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/ISCX-VPN/test_inference.json) (318KB)
+
+### DataCon-Proxy Traffic
+- [DataCon-Proxy/train_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/DataCon-Proxy/train_inference.json) (3.9MB)
+- [DataCon-Proxy/test_inference.json](https://raw.githubusercontent.com/fdcgh/dataset/main/DataCon-Proxy/test_inference.json) (427KB)
